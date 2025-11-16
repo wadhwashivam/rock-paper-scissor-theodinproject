@@ -45,24 +45,54 @@ function playRound(getHumanChoice, computerChoice){
         console.log("You Lose! Scissor beats Paper.");
         computerScore++;
     }
-    console.log(`SCORE: Computer - ${computerScore} / Human - ${humanScore}`)
 }
 
-//PlayGame
+// //PlayGame
+// function playGame(){
+//     for (let currentRound = 1; currentRound <= 5; currentRound++){
+//         let computerSelection = computerChoice();
+//         let humanSelection = getHumanChoice();
+//         playRound(humanSelection, computerSelection);
+//     }
+//     if (humanScore > computerScore){
+//         console.log("Human Wins the Game!"); 
+    
+//     }else if (computerScore > humanScore){
+//         console.log("Computer Wins the Game!");
+//     } else {
+//         console.log("The Game is a Tie!");
+//     }   
+// }
+
+// PlayGame
 function playGame(){
-    for (let currentRound = 1; currentRound <= 5; currentRound++){
-        let computerSelection = computerChoice();
-        let humanSelection = getHumanChoice();
-        playRound(humanSelection, computerSelection);
-    }
+    let computerSelection = computerChoice();
+    let humanSelection = getHumanChoice();
+    playRound(humanSelection,computerSelection);
+
+    let computerSelection2 = computerChoice();
+    let humanSelection2 = getHumanChoice();
+    playRound(humanSelection2,computerSelection2);
+
+    let computerSelection3 = computerChoice();
+    let humanSelection3 = getHumanChoice();
+    playRound(humanSelection3,computerSelection3);
+
+    let computerSelection4 = computerChoice();
+    let humanSelection4 = getHumanChoice();
+    playRound(humanSelection4,computerSelection4);
+
+    let computerSelection5 = computerChoice();
+    let humanSelection5 = getHumanChoice();
+    playRound(humanSelection5,computerSelection5);
+
     if (humanScore > computerScore){
         console.log("Human Wins the Game!"); 
-    
     }else if (computerScore > humanScore){
         console.log("Computer Wins the Game!");
     } else {
         console.log("The Game is a Tie!");
-    }   
+    }
 }
 
 
